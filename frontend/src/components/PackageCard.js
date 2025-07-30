@@ -30,7 +30,8 @@ const PackageCard = ({ image, price, title, location, duration, reviews, Subtitl
         setIsSending(true);
 
         try {
-            const res = await fetch("https://swarna-backend-xze9.onrender.com/api/book", {
+            const res = await fetch("http://localhost:5000/api/book", {
+
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
