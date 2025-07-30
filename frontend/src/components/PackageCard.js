@@ -30,9 +30,7 @@ const PackageCard = ({ image, price, title, location, duration, reviews, Subtitl
         setIsSending(true);
 
         try {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/book`, {
-
-
+            const res = await fetch("https://swarna-backend-xze9.onrender.com/api/book", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -135,7 +133,7 @@ const PackageCard = ({ image, price, title, location, duration, reviews, Subtitl
                             <input type="number" name="days" placeholder="No. of Days" required onChange={handleInputChange} />
                             <div className="modal-buttons">
                                 <button type="submit" className="btn-style" disabled={isSending}>
-                                    {isSending ? "Sending..." : "Send Booking"}
+                                    {isSending ? "Sending..." : "Send a Quote"}
                                 </button>
                                 <button type="button" onClick={() => setShowModal(false)}>Cancel</button>
                             </div>
