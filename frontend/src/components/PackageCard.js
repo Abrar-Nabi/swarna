@@ -30,7 +30,8 @@ const PackageCard = ({ image, price, title, location, duration, reviews, Subtitl
         setIsSending(true);
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_API_URL}/api/book`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/book`, {
+
 
                 method: "POST",
                 headers: {
